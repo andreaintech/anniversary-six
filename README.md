@@ -1,73 +1,122 @@
-# React + TypeScript + Vite
+# Anniversary Quiz 💕
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fun and interactive quiz app built with React, TypeScript, and Vite to celebrate special moments together.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🎯 Interactive quiz with multiple-choice questions
+- 📊 Score tracking and results display
+- 🔄 Restart functionality to play again
+- 💝 Personalized questions for special occasions
+- 🎨 Clean and modern UI
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React 19** - UI library
+- **TypeScript** - Type safety
+- **Vite** - Build tool and dev server
+- **ESLint** - Code linting
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+src/
+├── components/
+│   ├── Quiz.tsx          # Main quiz component with state management
+│   ├── QuestionCard.tsx  # Question display component
+│   └── ResultScreen.tsx  # Results display component
+├── data/
+│   └── questions.ts      # Quiz questions and type definitions
+├── App.tsx               # Root component
+└── main.tsx              # Application entry point
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Getting Started
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Prerequisites
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Node.js (v18 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd anniversary-six
 ```
+
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
+
+### Development
+
+Start the development server:
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+The app will be available at `http://localhost:5173`
+
+### Build
+
+Build for production:
+```bash
+npm run build
+# or
+yarn build
+```
+
+### Preview
+
+Preview the production build:
+```bash
+npm run preview
+# or
+yarn preview
+```
+
+## Customization
+
+### Adding Questions
+
+Edit `src/data/questions.ts` to add, modify, or remove questions:
+
+```typescript
+export const questions: QuizQuestion[] = [
+  {
+    id: 'q1',
+    question: 'Your question here?',
+    options: [
+      { id: 'a', text: 'Option A' },
+      { id: 'b', text: 'Option B' },
+      { id: 'c', text: 'Option C' },
+      { id: 'd', text: 'Option D' },
+    ],
+    correctOptionId: 'a', // The correct answer
+  },
+  // Add more questions...
+];
+```
+
+### Styling
+
+- Global styles: `src/index.css`
+- App-specific styles: `src/App.css`
+
+## Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
+
+## License
+
+Private project - All rights reserved
