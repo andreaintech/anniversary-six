@@ -45,6 +45,15 @@ body {
   color: var(--text-primary);
   position: relative;
   overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+  /* Remove tap highlight on mobile */
+}
+
+/* Mobile viewport fix */
+@supports (-webkit-touch-callout: none) {
+  body {
+    min-height: -webkit-fill-available;
+  }
 }
 
 /* Animated background particles */

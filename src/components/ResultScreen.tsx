@@ -1,5 +1,3 @@
-// src/components/ResultScreen.tsx
-
 type Props = {
     readonly score: number;
     readonly totalQuestions: number;

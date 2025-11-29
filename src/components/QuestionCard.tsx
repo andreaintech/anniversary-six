@@ -40,8 +40,8 @@ export function QuestionCard({
             <h2>{question.question}</h2>
 
             <ul>
-                {question.options.map((option) => (
-                    <li key={option.id}>
+                {question.options.map((option, index) => (
+                    <li key={option.id} style={{ marginBottom: index < question.options.length - 1 ? '1.5rem' : '0' }}>
                         <button
                             type="button"
                             onClick={() => onSelectOption(option.id)}

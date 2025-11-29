@@ -1,12 +1,16 @@
 // src/App.tsx
 import { Quiz } from './components/Quiz';
+import { DeviceDetector } from './components/DeviceDetector';
 
 function App() {
   return (
-    <main>
-      <h1>Anniversary Quiz 💕</h1>
-      <Quiz />
-    </main>
+    <>
+      <DeviceDetector />
+      <main>
+        <h1>Anniversary Quiz 💕</h1>
+        <Quiz />
+      </main>
+    </>
   );
 }
 
