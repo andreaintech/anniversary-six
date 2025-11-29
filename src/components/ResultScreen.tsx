@@ -1,9 +1,9 @@
 // src/components/ResultScreen.tsx
 
 type Props = {
-    score: number;
-    totalQuestions: number;
-    onRestart: () => void;
+    readonly score: number;
+    readonly totalQuestions: number;
+    readonly onRestart: () => void;
 };
 
 function getMessage(score: number, total: number): string {
@@ -23,11 +23,11 @@ function getMessage(score: number, total: number): string {
 export function ResultScreen({ score, totalQuestions, onRestart }: Props) {
     return (
         <div className="result-screen">
-            <h2>Resultado</h2>
-            <p>
+            <h2 style={{ color: '#FFFFFF' }}>Resultado</h2>
+            <p style={{ color: '#FFFFFF' }}>
                 Respondiste correctamente {score} de {totalQuestions} preguntas.
             </p>
-            <p>{getMessage(score, totalQuestions)}</p>
+            <p style={{ color: '#FFFFFF' }}>{getMessage(score, totalQuestions)}</p>
 
             <button type="button" onClick={onRestart}>
                 Volver a jugar

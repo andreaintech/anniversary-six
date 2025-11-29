@@ -2,12 +2,14 @@
 import type { QuizQuestion } from '../data/questions';
 
 type Props = {
-    question: QuizQuestion;
-    selectedOptionId: string | null;
-    onSelectOption: (optionId: string) => void;
-    onNext: () => void;
-    isLastQuestion: boolean;
-    isAnswered: boolean;
+    readonly question: QuizQuestion;
+    readonly selectedOptionId: string | null;
+    readonly onSelectOption: (optionId: string) => void;
+    readonly onNext: () => void;
+    readonly isLastQuestion: boolean;
+    readonly isAnswered: boolean;
+    readonly currentQuestionNumber: number;
+    readonly totalQuestions: number;
 };
 
 export function QuestionCard({
@@ -17,9 +19,24 @@ export function QuestionCard({
     onNext,
     isLastQuestion,
     isAnswered,
+    currentQuestionNumber,
+    totalQuestions,
 }: Props) {
+    const progress = (currentQuestionNumber / totalQuestions) * 100;
+
     return (
         <div className="question-card">
+            <div className="question-progress">
+                <div className="progress-bar">
+                    <div
+                        className="progress-fill"
+                        style={{ width: `${progress}%` }}
+                    />
+                </div>
+                <span className="progress-text" style={{ color: '#FFFFFF' }}>
+                    Pregunta {currentQuestionNumber} de {totalQuestions}
+                </span>
+            </div>
             <h2>{question.question}</h2>
 
             <ul>

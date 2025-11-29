@@ -49,12 +49,15 @@ export function Quiz() {
 
     return (
         <QuestionCard
+            key={currentQuestion.id}
             question={currentQuestion}
             selectedOptionId={selectedOptionId}
             onSelectOption={handleSelectOption}
             onNext={handleNext}
             isLastQuestion={isLastQuestion}
             isAnswered={isAnswered}
+            currentQuestionNumber={currentQuestionIndex + 1}
+            totalQuestions={questions.length}
         />
     );
 }
