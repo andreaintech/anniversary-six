@@ -9,6 +9,7 @@ export const Timeline = () => {
     const [showDetailsCard, setShowDetailsCard] = useState(false);
     const [currentDetailImage, setCurrentDetailImage] = useState(0);
     const [isDetailModalOpen, setIsDetailModalOpen] = useState(false);
+    const [showGiftPopup, setShowGiftPopup] = useState(false);
     const timelineRef = useRef<HTMLDivElement>(null);
     const confettiCanvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -47,10 +48,34 @@ export const Timeline = () => {
         return () => document.removeEventListener('keydown', handleEscape);
     }, [isDetailModalOpen]);
 
+    // Show gift popup when reaching the last detail image
+    useEffect(() => {
+        if (showDetailsCard && currentDetailImage === 6 && !showGiftPopup) {
+            // Small delay to ensure smooth transition
+            const timer = setTimeout(() => {
+                setShowGiftPopup(true);
+            }, 500);
+            return () => clearTimeout(timer);
+        }
+    }, [currentDetailImage, showDetailsCard, showGiftPopup]);
+
     const handleRomanticClick = () => {
         setShowRomanticMessage(true);
         setShowConfetti(true);
         triggerConfetti();
+    };
+
+    const handleResetToStart = () => {
+        // Reset all states to initial values
+        setShowRomanticMessage(false);
+        setShowDetailsCard(false);
+        setShowGiftPopup(false);
+        setCurrentDetailImage(0);
+        setIsDetailModalOpen(false);
+        setShowConfetti(false);
+
+        // Scroll to top
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
     const triggerConfetti = () => {
@@ -319,6 +344,46 @@ export const Timeline = () => {
 
                                 <div className="detail-modal-counter">
                                     {currentDetailImage + 1} / 7
+                                </div>
+                            </div>
+                        </div>
+                    )}
+
+                    {/* Popup de regalo cuando llega a la última foto */}
+                    {showGiftPopup && (
+                        <div
+                            className="gift-popup-overlay"
+                            onClick={() => setShowGiftPopup(false)}
+                            role="dialog"
+                            aria-modal="true"
+                            aria-label="Mensaje de regalo"
+                        >
+                            <div className="gift-popup-content" onClick={(e) => e.stopPropagation()}>
+                                <button
+                                    type="button"
+                                    className="gift-popup-close"
+                                    onClick={() => setShowGiftPopup(false)}
+                                    aria-label="Cerrar"
+                                >
+                                    ×
+                                </button>
+                                <h3 className="gift-popup-title">Te tengo un regalo</h3>
+                                <p className="gift-popup-message">Espero te guste 💜🧡</p>
+                                <div className="gift-popup-buttons">
+                                    <button
+                                        type="button"
+                                        className="gift-popup-button gift-popup-button-primary"
+                                        onClick={() => setShowGiftPopup(false)}
+                                    >
+                                        ¡Gracias! 💖
+                                    </button>
+                                    <button
+                                        type="button"
+                                        className="gift-popup-button gift-popup-button-secondary"
+                                        onClick={handleResetToStart}
+                                    >
+                                        Volver a empezar
+                                    </button>
                                 </div>
                             </div>
                         </div>
