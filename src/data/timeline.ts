@@ -25,7 +25,7 @@ export const timelineEvents: TimelineEvent[] = [
     {
         id: '2020-01',
         date: '2020',
-        title: 'Año de Dificultades',
+        title: 'Un año de dificultades',
         images: [
             '/timeline/2020-1.jpg',
             '/timeline/2020-2.jpg',
@@ -37,7 +37,7 @@ export const timelineEvents: TimelineEvent[] = [
     {
         id: '2021-01',
         date: '2021',
-        title: 'Nuevas Aventuras',
+        title: 'Nuevas aventuras',
         images: [
             '/timeline/2021-1.jpg',
             '/timeline/2021-2.jpg'
@@ -48,7 +48,7 @@ export const timelineEvents: TimelineEvent[] = [
     {
         id: '2022-01',
         date: '2022',
-        title: 'Año de Metas y Logros',
+        title: 'Un año de metas y logros',
         images: [
             '/timeline/2022-1.jpg',
             '/timeline/2022-2.jpg',
@@ -65,20 +65,20 @@ export const timelineEvents: TimelineEvent[] = [
     {
         id: '2023-01',
         date: '2023',
-        title: 'Año de Logros',
+        title: 'Un año con algunas adversidades',
         images: [
             '/timeline/2023-1.jpg',
             '/timeline/2023-2.jpg',
             '/timeline/2023-3.jpg',
             '/timeline/2023-4.jpg'
         ],
-        anecdote: 'Celebramos cada pequeño triunfo como si fuera el más grande.',
-        funFact: 'Bailamos bajo la lluvia más veces de las que podemos contar! 💃🕺'
+        anecdote: 'Este año fue un poco dificil (laboralmente hablando), sin embargo siempre nos apoyamos mutuamente para vencer las adversidades',
+        funFact: 'Lo importante es que nos fuimos adaptando a las nuevas circunstancias y nos ayudamos mutuamente a seguir adelante 💪🏽'
     },
     {
         id: '2024-01',
         date: '2024',
-        title: 'El Presente',
+        title: 'Un buen año',
         images: [
             '/timeline/2024-1.jpg',
             '/timeline/2024-2.jpg',
@@ -87,12 +87,12 @@ export const timelineEvents: TimelineEvent[] = [
             '/timeline/2024-5.jpg'
         ],
         anecdote: 'Cada día es una nueva razón para sonreír cuando estoy contigo.',
-        funFact: 'Este año rompimos nuestro récord de abrazos diarios! 🤗'
+        funFact: 'Este año fue uno de los más exitosos, nos sentiamos muy bien en nuestros trabajos y tuvimos muchas salidas con amistades y festejos en familia y con compañeros de trabajo 🍻'
     },
     {
         id: '2025-01',
         date: '2025',
-        title: 'El Futuro',
+        title: 'Un año agridulce lleno de cambios',
         images: [
             '/timeline/2025-1.jpg',
             '/timeline/2025-2.jpg',
@@ -105,8 +105,8 @@ export const timelineEvents: TimelineEvent[] = [
             '/timeline/2025-9.jpg',
             '/timeline/2025-10.jpg'
         ],
-        anecdote: 'Aún no sabemos qué nos depara, pero sabemos que será juntos.',
-        funFact: '¡Las mejores aventuras están por venir! ✨'
+        anecdote: 'Fue un año dificil con la perdida de un ser querido muy cercano (mi mami), sin embargo valoro mucho todo el esfuerzo y apoyo que me ofreciste',
+        funFact: 'Por otro lado tambien hubo muchas celebraciones, principalmente por la graduacion de mi hermana Fabi, mas bodas y celebraciones de cumpleaños con amigos y familiares y tu siempre has estado presente. A pesar de que han habido altas y bajas en tu trabajo, yo se que siempre lo has hecho con mucho esfuerzo y dedicacion y se que conseguiras pronto tu trabajo soñado, no dudes nunca de tus capacidades. Recuerda que aún no sabemos qué nos depara el futuro, pero sabemos que será juntos. Estoy segura que las mejores aventuras están por venir! ✨'
     }
 ];
 

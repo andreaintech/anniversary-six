@@ -167,11 +167,16 @@ export const Timeline = () => {
                                 </p>
 
                                 <p>
-                                    Y recuerda que en los detalles esta la esencia de las personas.
+                                    Y recuerda que en los <u>detalles</u> esta la esencia de las personas.
                                     A lo mejor ya no lo quieras llevar grabado en tu piel pero espero que si desees llevarlo cerca de tu corazón
                                 </p>
                                 <p>
                                     Te amo mucho, espero te guste este detalle 💜🧡
+                                </p>
+
+
+                                <p>
+                                    Confundido? No te preocupes, te lo voy a explicar...
                                 </p>
                                 <button
                                     className="romantic-button"
@@ -188,7 +193,7 @@ export const Timeline = () => {
                                         }, 300);
                                     }}
                                 >
-                                    Te amo también 💖
+                                    Dame mas pistas... 👀
                                 </button>
                             </div>
                         )}
