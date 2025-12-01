@@ -33,6 +33,20 @@ export const Timeline = () => {
         return () => observer.disconnect();
     }, []);
 
+    // Handle Escape key for detail modal
+    useEffect(() => {
+        if (!isDetailModalOpen) return;
+
+        const handleEscape = (e: KeyboardEvent) => {
+            if (e.key === 'Escape') {
+                setIsDetailModalOpen(false);
+            }
+        };
+
+        document.addEventListener('keydown', handleEscape);
+        return () => document.removeEventListener('keydown', handleEscape);
+    }, [isDetailModalOpen]);
+
     const handleRomanticClick = () => {
         setShowRomanticMessage(true);
         setShowConfetti(true);
@@ -132,7 +146,7 @@ export const Timeline = () => {
 
             <div className="timeline-footer">
                 <div className="romantic-message-container">
-                    {!showRomanticMessage && (
+                    {!showRomanticMessage && !showDetailsCard && (
                         <>
                             <h3 className="future-question">
                                 ¿Listo para seguir viviendo los próximos años juntos?
@@ -254,15 +268,9 @@ export const Timeline = () => {
                         <div
                             className="detail-modal-overlay"
                             onClick={() => setIsDetailModalOpen(false)}
-                            onKeyDown={(e) => {
-                                if (e.key === 'Escape') {
-                                    setIsDetailModalOpen(false);
-                                }
-                            }}
                             role="dialog"
                             aria-modal="true"
                             aria-label="Vista de imagen ampliada"
-                            tabIndex={-1}
                         >
                             <div className="detail-modal-content" onClick={(e) => e.stopPropagation()}>
                                 <button
@@ -341,6 +349,20 @@ const TimelineEventCard = ({ event, index, isVisible }: TimelineEventCardProps) 
     const closeImageModal = () => {
         setIsImageModalOpen(false);
     };
+
+    // Handle Escape key for modal
+    useEffect(() => {
+        if (!isImageModalOpen) return;
+
+        const handleEscape = (e: KeyboardEvent) => {
+            if (e.key === 'Escape') {
+                closeImageModal();
+            }
+        };
+
+        document.addEventListener('keydown', handleEscape);
+        return () => document.removeEventListener('keydown', handleEscape);
+    }, [isImageModalOpen]);
 
     const navigateModalImage = (direction: 'prev' | 'next') => {
         if (direction === 'prev') {
@@ -426,15 +448,9 @@ const TimelineEventCard = ({ event, index, isVisible }: TimelineEventCardProps) 
                 <div
                     className="image-modal-overlay"
                     onClick={closeImageModal}
-                    onKeyDown={(e) => {
-                        if (e.key === 'Escape') {
-                            closeImageModal();
-                        }
-                    }}
                     role="dialog"
                     aria-modal="true"
                     aria-label="Vista de imagen ampliada"
-                    tabIndex={-1}
                 >
                     <div className="image-modal-content" onClick={(e) => e.stopPropagation()}>
                         <button
