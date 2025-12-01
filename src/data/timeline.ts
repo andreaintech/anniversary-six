@@ -15,8 +15,9 @@ export const timelineEvents: TimelineEvent[] = [
         images: [
             '/timeline/2019-1.jpg',
             '/timeline/2019-2.jpg',
-            '/timeline/2019-3.jpg'
-            // Agrega más fotos aquí: '/timeline/2019-4.jpg', etc.
+            '/timeline/2019-3.jpg',
+            '/timeline/2019-4.jpg',
+            '/timeline/2019-5.jpg'
         ],
         anecdote: 'El año en que todo comenzó. Recuerdas cuando y como nos conocimos?',
         funFact: 'Me pediste ser tu novia en el Teatro Municipal de Valencia, vimos la obra El Cascanueces, te acuerdas? 🩰'
@@ -39,8 +40,7 @@ export const timelineEvents: TimelineEvent[] = [
         title: 'Nuevas Aventuras',
         images: [
             '/timeline/2021-1.jpg',
-            '/timeline/2021-2.jpg',
-            '/timeline/2021-3.jpg'
+            '/timeline/2021-2.jpg'
         ],
         anecdote: 'Cada día descubrimos algo nuevo el uno del otro.',
         funFact: 'Poco a poco la pandemia se iba errandicando y empezamos a vernos mas seguido. Valoro mucho cada momento que pasamos juntos, fue el primer año nuevo juntos 🎆'
@@ -52,7 +52,12 @@ export const timelineEvents: TimelineEvent[] = [
         images: [
             '/timeline/2022-1.jpg',
             '/timeline/2022-2.jpg',
-            '/timeline/2022-3.jpg'
+            '/timeline/2022-3.jpg',
+            '/timeline/2022-4.jpg',
+            '/timeline/2022-5.jpg',
+            '/timeline/2022-6.jpg',
+            '/timeline/2022-7.jpg',
+            '/timeline/2022-8.jpg'
         ],
         anecdote: 'Los momentos simples se convirtieron en los más especiales.',
         funFact: 'Nos mudamos a juntos a nuestro primer hogar juntos. Fue un momento muy especial, nos sentiamos como en casa y a pesar de que al principio fue dificil, nos fuimos adaptando poco a poco. Tambien fue el año en el que fuimos a nuestras primeras bodas juntos 💒'
@@ -64,7 +69,8 @@ export const timelineEvents: TimelineEvent[] = [
         images: [
             '/timeline/2023-1.jpg',
             '/timeline/2023-2.jpg',
-            '/timeline/2023-3.jpg'
+            '/timeline/2023-3.jpg',
+            '/timeline/2023-4.jpg'
         ],
         anecdote: 'Celebramos cada pequeño triunfo como si fuera el más grande.',
         funFact: 'Bailamos bajo la lluvia más veces de las que podemos contar! 💃🕺'
@@ -76,7 +82,9 @@ export const timelineEvents: TimelineEvent[] = [
         images: [
             '/timeline/2024-1.jpg',
             '/timeline/2024-2.jpg',
-            '/timeline/2024-3.jpg'
+            '/timeline/2024-3.jpg',
+            '/timeline/2024-4.jpg',
+            '/timeline/2024-5.jpg'
         ],
         anecdote: 'Cada día es una nueva razón para sonreír cuando estoy contigo.',
         funFact: 'Este año rompimos nuestro récord de abrazos diarios! 🤗'
@@ -87,7 +95,15 @@ export const timelineEvents: TimelineEvent[] = [
         title: 'El Futuro',
         images: [
             '/timeline/2025-1.jpg',
-            '/timeline/2025-2.jpg'
+            '/timeline/2025-2.jpg',
+            '/timeline/2025-3.jpg',
+            '/timeline/2025-4.jpg',
+            '/timeline/2025-5.jpg',
+            '/timeline/2025-6.jpg',
+            '/timeline/2025-7.jpg',
+            '/timeline/2025-8.jpg',
+            '/timeline/2025-9.jpg',
+            '/timeline/2025-10.jpg'
         ],
         anecdote: 'Aún no sabemos qué nos depara, pero sabemos que será juntos.',
         funFact: '¡Las mejores aventuras están por venir! ✨'
