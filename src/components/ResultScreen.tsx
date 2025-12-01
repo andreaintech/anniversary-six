@@ -12,7 +12,7 @@ function getMessage(score: number, total: number): string {
     }
 
     if (ratio >= 0.6) {
-        return '¡Nos conoces muy bien, casi perfectx! ✨';
+        return '¡Nos conoces muy bien, casi perfecto! ✨';
     }
 
     return 'Tenemos muchas anécdotas para seguir recordando juntos 🥰';
