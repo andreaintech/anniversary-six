@@ -144,55 +144,57 @@ export const Timeline = () => {
                 ))}
             </div>
 
-            <div className="timeline-footer">
-                <div className="romantic-message-container">
-                    {!showRomanticMessage && !showDetailsCard && (
-                        <>
-                            <h3 className="future-question">
-                                ¿Listo para seguir viviendo los próximos años juntos?
-                            </h3>
-                            <button className="romantic-button" onClick={handleRomanticClick}>
-                                ¡Por supuesto! 💕
-                            </button>
-                        </>
-                    )}
-                    {showRomanticMessage && !showDetailsCard && (
-                        <div className="romantic-message">
-                            <h3>Te amo más de lo que las palabras pueden expresar</h3>
-                            <p>
-                                Cada día a tu lado es un regalo. Gracias por ser mi persona favorita,
-                                mi mejor amigo, y mi todo. Aquí estoy por muchos años más de risas,
-                                aventuras, y amor infinito 💜🧡
-                            </p>
+            {!showDetailsCard && (
+                <div className="timeline-footer">
+                    <div className="romantic-message-container">
+                        {!showRomanticMessage && (
+                            <>
+                                <h3 className="future-question">
+                                    ¿Listo para seguir viviendo los próximos años juntos?
+                                </h3>
+                                <button className="romantic-button" onClick={handleRomanticClick}>
+                                    ¡Por supuesto! 💕
+                                </button>
+                            </>
+                        )}
+                        {showRomanticMessage && (
+                            <div className="romantic-message">
+                                <h3>Te amo más de lo que las palabras pueden expresar</h3>
+                                <p>
+                                    Cada día a tu lado es un regalo. Gracias por ser mi persona favorita,
+                                    mi mejor amigo, y mi todo. Aquí estoy por muchos años más de risas,
+                                    aventuras, y amor infinito 💜🧡
+                                </p>
 
-                            <p>
-                                Y recuerda que en los detalles esta la esencia de las personas.
-                                A lo mejor ya no lo quieras llevar grabado en tu piel pero espero que si desees llevarlo cerca de tu corazón
-                            </p>
-                            <p>
-                                Te amo mucho, espero te guste este detalle 💜🧡
-                            </p>
-                            <button
-                                className="romantic-button"
-                                onClick={() => {
-                                    setShowDetailsCard(true);
-                                    setShowConfetti(true);
-                                    triggerConfetti();
-                                    // Scroll suave hacia la card de detalles después de un pequeño delay
-                                    setTimeout(() => {
-                                        const detailsCard = document.querySelector('.details-card-container');
-                                        if (detailsCard) {
-                                            detailsCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                                        }
-                                    }, 300);
-                                }}
-                            >
-                                Te amo también 💖
-                            </button>
-                        </div>
-                    )}
+                                <p>
+                                    Y recuerda que en los detalles esta la esencia de las personas.
+                                    A lo mejor ya no lo quieras llevar grabado en tu piel pero espero que si desees llevarlo cerca de tu corazón
+                                </p>
+                                <p>
+                                    Te amo mucho, espero te guste este detalle 💜🧡
+                                </p>
+                                <button
+                                    className="romantic-button"
+                                    onClick={() => {
+                                        setShowDetailsCard(true);
+                                        setShowConfetti(true);
+                                        triggerConfetti();
+                                        // Scroll suave hacia la card de detalles después de un pequeño delay
+                                        setTimeout(() => {
+                                            const detailsCard = document.querySelector('.details-card-container');
+                                            if (detailsCard) {
+                                                detailsCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                            }
+                                        }, 300);
+                                    }}
+                                >
+                                    Te amo también 💖
+                                </button>
+                            </div>
+                        )}
+                    </div>
                 </div>
-            </div>
+            )}
 
             {/* Card de detalles con imágenes */}
             {showDetailsCard && (
