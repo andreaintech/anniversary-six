@@ -13,7 +13,7 @@ export type QuizQuestion = {
 export const questions: QuizQuestion[] = [
     {
         id: 'q1',
-        question: '¿En qué año empezamos a salir oficialmente?',
+        question: '¿En qué año empezamos a salir?',
         options: [
             { id: 'a', text: '2017' },
             { id: 'b', text: '2018' },
@@ -46,7 +46,7 @@ export const questions: QuizQuestion[] = [
     },
     {
         id: 'q4',
-        question: '¿Cuál es nuestra comida favorita para pedir juntos (o que solemos pedir juntos)?',
+        question: '¿Qué solemos pedir para comer en casa?',
         options: [
             { id: 'a', text: 'Pizza' },
             { id: 'b', text: 'Arepa' },
@@ -79,36 +79,36 @@ export const questions: QuizQuestion[] = [
     },
     {
         id: 'q7',
-        question: '¿En donde tuvimos intimidad por primera vez?',
+        question: '¿Cual fue la cancion que pedimos en el primer karaoke al que fuimos (en la hermandad)?',
         options: [
-            { id: 'a', text: 'En un motel' },
-            { id: 'b', text: 'En el 9' },
-            { id: 'c', text: 'En tu cuarto' },
-            { id: 'd', text: 'En casa de la tia de Andrea' },
-        ],
-        correctOptionId: 'b',
-    },
-    {
-        id: 'q8',
-        question: '¿Qué cosa hago que siempre lo hace reír?',
-        options: [
-            { id: 'a', text: 'Mis caras raras' },
-            { id: 'b', text: 'Mis bailes random' },
-            { id: 'c', text: 'Mis chistes malos' },
-            { id: 'd', text: 'Todas las anteriores' },
+            { id: 'a', text: 'Colgando en tus manos' },
+            { id: 'b', text: 'Hoy tengo ganas de ti' },
+            { id: 'c', text: 'Mentiras' },
+            { id: 'd', text: 'El duelo' },
         ],
         correctOptionId: 'd',
     },
     {
-        id: 'q9',
-        question: '¿En qué mes es nuestro aniversario?',
+        id: 'q8',
+        question: '¿Cuál es la fecha de nuestro aniversario?',
         options: [
-            { id: 'a', text: 'Octubre' },
-            { id: 'b', text: 'Noviembre' },
-            { id: 'c', text: 'Diciembre' },
-            { id: 'd', text: 'Enero' },
+            { id: 'a', text: '07 de diciembre de 2018' },
+            { id: 'b', text: '07 de diciembre de 2019' },
+            { id: 'c', text: '17 de diciembre de 2019' },
+            { id: 'd', text: '17 de diciembre de 2020' },
         ],
-        correctOptionId: 'c',
+        correctOptionId: 'b',
+    },
+    {
+        id: 'q9',
+        question: '¿En qué mes nos conocimos?',
+        options: [
+            { id: 'a', text: 'Agosto' },
+            { id: 'b', text: 'Septiembre' },
+            { id: 'c', text: 'Noviembre' },
+            { id: 'd', text: 'Diciembre' },
+        ],
+        correctOptionId: 'a',
     },
     {
         id: 'q10',
@@ -152,11 +152,11 @@ export const questions: QuizQuestion[] = [
             { id: 'c', text: 'Una empanada' },
             { id: 'd', text: 'Un chocolate' },
         ],
-        correctOptionId: 'c',
+        correctOptionId: 'b',
     },
     {
         id: 'q14',
-        question: 'Cuando me escribiste por whatsapp por primera vez, ¿qué tipo de mensaje me escribiste?',
+        question: 'Cuando me escribiste por whatsapp por primera vez, ¿qué mensaje me escribiste?',
         options: [
             { id: 'a', text: 'Ah conoces a Maria Medina, preguntale por mi a ver si soy un loco de tinder' },
             { id: 'b', text: 'Te compre un cachito btw' },
@@ -167,34 +167,34 @@ export const questions: QuizQuestion[] = [
     },
     {
         id: 'q15',
-        question: '¿Quién manda más memes durante el día?',
+        question: '¿Frase que soliamos decirnos?',
         options: [
-            { id: 'a', text: 'Andrea' },
-            { id: 'b', text: 'Arturo' },
-            { id: 'c', text: 'Estamos empatados' },
-            { id: 'd', text: 'Casi nunca mandamos memes' },
+            { id: 'a', text: 'Te estimo mucho' },
+            { id: 'b', text: 'Te quiero por siempre' },
+            { id: 'c', text: 'Somos mucho mas que dos' },
+            { id: 'd', text: 'Somos dos locos enamorados' },
         ],
-        correctOptionId: 'b',
+        correctOptionId: 'c',
     },
     {
         id: 'q16',
-        question: '¿Cuál es la mejor parte de nuestros domingos?',
+        question: '¿Quien no queria tener a Nala al principio cuando nos dijeron que nos la iban a regalar?',
         options: [
-            { id: 'a', text: 'Dormir hasta tarde' },
-            { id: 'b', text: 'Comer juntos' },
-            { id: 'c', text: 'Ver series/pelis' },
-            { id: 'd', text: 'Estar juntitos, no importa el plan' },
+            { id: 'a', text: 'Andrea' },
+            { id: 'b', text: 'Arturo' },
+            { id: 'c', text: 'Mi mamá' },
+            { id: 'd', text: 'Tu mamá' },
         ],
-        correctOptionId: 'd',
+        correctOptionId: 'b',
     },
     {
         id: 'q17',
         question: 'Si tuviéramos que elegir un plan ahora mismo, ¿cuál sería?',
         options: [
-            { id: 'a', text: 'Maratón de nuestra serie' },
+            { id: 'a', text: 'Ir al centro comercial' },
             { id: 'b', text: 'Salir a comer algo rico' },
-            { id: 'c', text: 'Ir a bailar' },
-            { id: 'd', text: 'Dar una vuelta sin rumbo' },
+            { id: 'c', text: 'Ir a bailar a una discoteca' },
+            { id: 'd', text: 'Ir a un karaoke' },
         ],
         correctOptionId: 'b',
     },
@@ -218,7 +218,7 @@ export const questions: QuizQuestion[] = [
             { id: 'c', text: 'Miercoles 14 de agosto de 2019' },
             { id: 'd', text: 'Viernes 18 de septiembre de 2019' },
         ],
-        correctOptionId: 'a',
+        correctOptionId: 'c',
     },
     {
         id: 'q20',
@@ -227,9 +227,9 @@ export const questions: QuizQuestion[] = [
             { id: 'a', text: 'Las risas' },
             { id: 'b', text: 'Los momentos difíciles que superamos' },
             { id: 'c', text: 'Lo mucho que hemos crecido juntos' },
-            { id: 'd', text: 'Que seguimos eligiéndonos cada día' },
+            { id: 'd', text: 'Todas las anteriores' },
         ],
-        correctOptionId: 'c',
+        correctOptionId: 'd',
     },
 ];
 
