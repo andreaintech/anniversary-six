@@ -182,8 +182,8 @@ export const questions: QuizQuestion[] = [
         options: [
             { id: 'a', text: 'Andrea' },
             { id: 'b', text: 'Arturo' },
-            { id: 'c', text: 'Mi mamá' },
-            { id: 'd', text: 'Tu mamá' },
+            { id: 'c', text: 'La sra Maira' },
+            { id: 'd', text: 'La sra Nela' },
         ],
         correctOptionId: 'b',
     },
